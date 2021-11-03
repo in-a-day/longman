@@ -1,0 +1,119 @@
+
+
+-> dictentry
+1. sense
+    -> gram exa
+      ~ ex  a range of services
+      ~ ex  The drug is effective against a range of bacteria.
+    -> collo exa
+      ~ ex  students from a wide range of backgrounds
+      ~ ex  advice on a whole range of subjects
+    -> collo exa
+      ~ ex  A fairly narrow range of people are responsible for key decisions.
+2. sense
+      ~ ex  Even the cheapest property was out of our price range (=too expensive for us).
+    -> gram exa
+      ~ ex  Your blood pressure’s well within the normal range.
+    -> gram exa
+      ~ ex  a salary in the range of $25,000 to $30,000
+    -> collo exa
+      ~ ex  toys suitable for children in the pre-school age range
+      ~ ex  a temperature range of 72–85º,
+3. sense
+      ~ ex  The watches in this range are priced at £24.50.
+      ~ ex  We have a very large product range.
+    -> gram exa
+      ~ ex  a new range of kitchenware
+      ~ ex  A company from Darlington has just launched its latest range of fashion jewellery.
+4. sense
+ a). sense
+    -> gram exa
+      ~ ex  missiles with a range of 3000 km
+    -> gram exa
+      ~ ex  We waited until the enemy was within range.
+    -> gram exa
+      ~ ex  I ducked down to get out of range of the gunshots.
+    -> collo exa
+      ~ ex  Both men had been shot at point-blank range.
+ b). sense
+      ~ ex  One way to see birds at close range is to attract them into your own garden.
+    -> gram exa
+      ~ ex  a handsome man who drew admiring glances from any female within range
+      ~ ex  any spot within range of your radio signal
+    -> gram exa
+      ~ ex  Joan hoped that the others were out of range of her mother’s voice.
+ c). sense
+    -> gram exa
+      ~ ex  The plane has a range of 3,600 miles.
+5. sense
+      ~ ex  His vocal range is amazing.
+6. sense
+      ~ ex  a land of high mountain ranges and deep valleys
+    -> collo exa
+      ~ ex  the longest range of hills in the Lake District
+7. sense
+      ~ ex  a rifle range
+      ~ ex  the police shooting range
+8. sense
+      ~ ex  an actor of extraordinary range and intensity
+9. sense
+10. sense
+ a). sense
+ b). sense
+      ~ ex  a coal-fired kitchen range
+
+
+-> dictentry
+1. sense
+ a). sense
+    -> gram exa
+      ~ ex  The show had a massive audience, ranging from children to grandparents.
+ b). sense
+    -> gram exa
+      ~ ex  There were 120 students whose ages ranged from 10 to 18.
+    -> gram exa
+      ~ ex  The population of these cities ranges between 3 and 5 million.
+    -> collo exa
+      ~ ex  The shoes range in price from $25 to $100.
+2. sense
+      ~ ex  The discussion ranged widely.
+    -> gram exa
+      ~ ex  The conversation had ranged over a variety of topics, from sport to current affairs.
+3. sense
+    -> gram exa
+      ~ ex  Cattle ranged over the pastures in search of food.
+4. sense
+5. sense
+      ~ ex  In the dining room, team photographs were ranged along the wall.
+
+
+-> dictentry
+1. sense
+      ~ ex  We are looking at properties within a certain price range.
+      ~ ex  People in the 35 to 44 age range are most likely to hold more than one job.
+      ~ ex  Brokers typically charge commissions in the 4% to 8% range.
+    -> gram exa
+      ~ ex  Sales will rise to a range of $12 million to $13 million.
+2. sense
+      ~ ex  GM shares traded in the $37 to $42 range for most of last year.
+      ~ ex  Oil remains in the $70-to-$80-a-barrel range.
+3. sense
+      ~ ex  a new range of kitchenware
+      ~ ex  a wide range of products and systems
+      ~ ex  the top of the range (=best sold by a company or shop) Rucanor shoe
+4. sense
+      ~ ex  These issues fall outside the range of the enquiry.
+
+
+-> dictentry
+. sense
+    -> gram exa
+      ~ ex  The judges’ salaries range from $82,000 to $99,000.
+      ~ ex  The population of these cities ranges between 3 and 5 million inhabitants.
+      ~ ex  The mainframe systems range in price from $1.3 million to $3.6 million.
+
+
+-> footer
+
+
+-> footer
