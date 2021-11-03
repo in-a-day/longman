@@ -2,7 +2,7 @@ from typing import List
 from bs4 import BeautifulSoup
 from bs4.element import Tag, NavigableString
 from typing import Union
-
+from writer import Writer
 
 """
 主要结构如下:
@@ -17,9 +17,6 @@ from typing import Union
 
 """
 
-class Writer():
-    f = None
-    sense_num = 1
 
 def to_str(el):
     return str(el) if el is not None else ''
@@ -39,9 +36,8 @@ class Dictionary():
     def __init__(self, src: str):
         with open('./1.txt', 'w') as fl:
             Writer.f = fl
-            soup = BeautifulSoup(src)
+            soup = BeautifulSoup(src, 'html.parser')
             if soup.find(class_ ='dictionary') is None:
-                print('no dictionary element')
                 return
             # 单词解释实体, 可能有多个意义
             self.dictEntry = [DictEntry(to_str(i)) for i in soup.find_all(class_ = 'dictentry')]
@@ -60,8 +56,7 @@ class DictEntry():
 
     def __init__(self, src: str):
         Writer.f.write('\n\n-> dictentry\n')
-        Writer.sense_num = 1
-        soup = BeautifulSoup(src)
+        soup = BeautifulSoup(src, 'html.parser')
         # 词典介绍, 例如: From Longman Dictionary of Contemporary English
         self.dictionary_intro = soup.find(class_ = 'dictionary_intro')
         # 实体, 包含了具体的单词解释
@@ -75,7 +70,7 @@ class Etym():
 
     def __init__(self, src: str):
         Writer.f.write('\n\n-> footer\n')
-        soup = BeautifulSoup(src)
+        soup = BeautifulSoup(src, 'html.parser')
         self.asset_intro = soup.find(class_ = 'asset_intro')
         self.head = Head(to_str(soup.find(class_ = 'Head')))
 
@@ -88,7 +83,7 @@ class Entry():
     """
 
     def __init__(self, src: str):
-        soup = BeautifulSoup(src)
+        soup = BeautifulSoup(src, 'html.parser')
         self.head: Head = Head(to_str(soup.find(class_ = 'Head')))
         # 可能包含多个Sense
         self.sense: List[Sense] = [Sense(to_str(i)) for i in soup.find_all(class_ = 'Sense')]
@@ -119,7 +114,7 @@ class Head():
     """
 
     def __init__(self, src: str):
-        soup = BeautifulSoup(src)
+        soup = BeautifulSoup(src, 'html.parser')
         # header word
         self.hwd = soup.find(class_ = 'HWD')
         # 连字符
@@ -156,16 +151,17 @@ class Sense():
     """
 
     def __init__(self, src: str) -> None:
-        soup = BeautifulSoup(src).find(class_ = 'Sense') 
+        soup = BeautifulSoup(src, 'html.parser').find(class_ = 'Sense') 
         isSub = False
         if not soup:
-            soup = BeautifulSoup(src).find(class_ = 'Subsense') 
+            soup = BeautifulSoup(src, 'html.parser').find(class_ = 'Subsense') 
             isSub = True
         if not soup:
             return
         # 单词解释序号, 可选
         self.sense_num = soup.find(class_ = 'sensenum')
         Writer.f.write(f'{" " if isSub else ""}{inner_str(self.sense_num)}. sense\n')
+        # 大意
         self.signpost = soup.find(class_ = 'SIGNPOST')
         # 词性, 例如: 可数不可数
         self.gram = soup.find(class_ = 'GRAM')
@@ -181,8 +177,6 @@ class Sense():
 
         # 这里造成了无限递归, 子例子, 可选
         sub_senses = soup.find_all(class_ = 'Subsense', recursive=False)
-        print(sub_senses)
-        print('------')
         if sub_senses:
             self.sub_sense: List[Sense] = [Sense(to_str(i)) for i in sub_senses]
 
@@ -194,7 +188,7 @@ class Exa():
     """
 
     def __init__(self, src: str) -> None:
-        soup = BeautifulSoup(src)
+        soup = BeautifulSoup(src, 'html.parser')
         self.prop = soup.find('span')
         self.examples: List[Example] = [Example(to_str(i)) for i in soup.find_all(class_ = 'EXAMPLE')]
 
@@ -231,7 +225,7 @@ class Example():
 
     def __init__(self, src: str):
         Writer.f.write('      ~ ex  ')
-        soup = BeautifulSoup(src)
+        soup = BeautifulSoup(src, 'html.parser')
         speaker = soup.find(class_ = 'speaker')
         if isinstance(speaker, Tag):
             self.speaker_file = speaker.get('data-src-mp3')

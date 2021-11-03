@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 class Engine():
 
-    def __init__(self):
+    def __init__(self, src):
         pass
 
     def exec(self):
@@ -14,6 +14,6 @@ class Engine():
 
 
 if __name__ == '__main__':
-    Engine().exec()
+    Engine('').exec()
 
 
